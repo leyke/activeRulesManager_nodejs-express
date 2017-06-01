@@ -1,0 +1,19 @@
+{
+  "name": "activeRules",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author":{
+    "name" : "Artem Makurkov",
+    "email" : "tema.makurkov@yandex.ru",
+    "url" : "https://vk.com/makurkov"
+  },
+  "dependencies": {
+    "express": "3.21.2",
+    "ejs": "*",
+    "bootstrap": "3.3.7",
+    "livereload": "*"
+  }
+}

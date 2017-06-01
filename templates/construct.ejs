@@ -1,0 +1,110 @@
+<% layout('layout/page') -%>
+<% block('title', 'Конструктор АП'); -%>
+
+<div class="col-md-6 table-wrap">
+    <h2>Активные правила</h2>
+    <table class="table rules">
+        <tr>
+            <th>№</th>
+            <th>Название</th>
+            <th>Статус</th>
+            <th>Управление</th>
+        </tr>
+        <tr><td>1</td><td>Rule 1</td><td>Activate</td><td><a class="edit-link" href="#">Редатировать</a></td></tr>
+        <tr><td>2</td><td>Rule 2</td><td>Deactivate</td><td><a class="edit-link" href="#">Редатировать</a></td></tr>
+        <tr><td>3</td><td>Rule 3</td><td>Activate</td><td><a class="edit-link" href="#">Редатировать</a></td></tr>
+        <tr><td>4</td><td>Rule 4</td><td>Deactivate</td><td><a class="edit-link" href="#">Редатировать</a></td></tr>
+    </table>
+    <button class="btn create">Создать</button>
+</div>
+<div class="col-md-offset-1 col-md-5 log-wrap">
+<h2>Соединение с БД</h2>
+    <p>Имя базы данных: TestDB1 </p>
+    <p>Cтатус: <span style="color:green">Connected</span></p>
+    <p>Пользователь: Developer </p>
+</div>
+<div class="col-md-12">
+    <form class="rule-constructor-form">
+        <div class="tabs">
+            <input id="tab1" type="radio" name="tabs">
+            <label for="tab1" title="Основные параметры">Основные параметры</label>
+
+            <input id="tab2" type="radio" name="tabs">
+            <label for="tab2" title="Вкладка 2">Событие вызова</label>
+
+            <input id="tab3" type="radio" name="tabs" checked>
+            <label for="tab3" title="Вкладка 3">Условие срабатывания</label>
+
+            <input id="tab4" type="radio" name="tabs">
+            <label for="tab4" title="Вкладка 4">Вызываемые действия</label>
+
+            <section id="content-tab1">
+                <p>Ввод/модификация основных характеристек Активных Правил</p>
+                <h4>Название</h4>
+                <input id="ruleName" name="ruleName" placeholder="Rule1">
+                <h4>Комментарий</h4>
+                <textarea id="ruleDesc" name="ruleDesc" placeholder="Описание правила"></textarea>
+                <h4>Наблюдаемая база данных</h4>
+                <input id="dbName" name="dbName" placeholder="TestDB1">
+                <h4>Текущее состояние правила</h4>
+                <span id="ruleState" style="color: orange">on Create</span>
+            </section>
+            <section id="content-tab2">
+                <p>
+                    Выберите тип события данного правила:
+                </p>
+                <input id="ruleEvent" type="radio" name="ruleEvent">
+                <label for="ruleEvent" title="Событие1">Событие1</label>
+            </section>
+            <section id="content-tab3">
+                <p>
+                    Выбор/создание условия создания активного правила
+                </p>
+                <table class="table conditions">
+                    <tr>
+                        <th>Выбор</th>
+                        <th>№</th>
+                        <th>Название</th>
+                        <th>Содержание</th>
+                    </tr>
+                    <tr><td><input type="checkbox" name="ruleCond"></td><td>1</td><td>Cond 1</td><td>[param1.TestDB1] > [param2.TestDB1]</td><td><a class="edit-link" href="#">Редатировать</a></td></tr>
+                </table>
+                <form class="cond-form">
+                    <h4>Название условия</h4>
+                    <input id="ruleCondName" type="text" name="ruleCondName">
+                    <h4>Содержание условия</h4>
+                    <textarea id="ruleCondDesc" type="text" name="ruleCondDesc"></textarea>
+
+                    <p><input type="button" class="btn" value="Добавить"></p>
+                </form>
+            </section>
+            <section id="content-tab4">
+                <p>
+                    Выбор/создание действий вызываемых правилом:
+                </p>
+                <table class="table conditions">
+                    <tr>
+                        <th>Выбор</th>
+                        <th>№</th>
+                        <th>Название</th>
+                        <th>Содержание</th>
+                    </tr>
+                    <tr><td><input type="checkbox" name="ruleAction"></td>
+                        <td>1</td><td>Cond 1</td>
+                        <td>call [Method1].Repository1</td>
+                        <td><a class="edit-link" href="#">Редатировать</a></td>
+                    </tr>
+                </table>
+                <form class="action-form">
+                    <h4>Название действия</h4>
+                    <input id="ruleActionName" type="text" name="ruleActionName">
+                    <h4>Содержание действия</h4>
+                    <textarea id="ruleActionDesc" type="text" name="ruleActionDesc"></textarea>
+
+                    <p><input type="button" class="btn" value="Добавить"></p>
+                </form>
+            </section>
+        </div>
+        <input type="button" class="btn" value="Сохранить">
+    </form>
+</div>

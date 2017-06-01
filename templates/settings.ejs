@@ -1,0 +1,64 @@
+<% layout('layout/page') -%>
+<% block('title', 'Настройки'); -%>
+
+<div class="col-md-5 bd-settings-wrap">
+    <h2>Соединение с БД</h2>
+    <form class="bd-settings col-md-12">
+        <h4 class="set-label col-md-12">
+            Адрес БД
+        </h4>
+        <input type="text" class="set-input col-md-12">
+        <h4 class="set-label col-md-12">
+            Логин
+        </h4>
+        <input type="text" class="set-input col-md-12">
+        <h4 class="set-label col-md-12">
+            Пароль
+        </h4>
+        <input type="text" class="set-input col-md-12">
+        <h4 class="set-label col-md-12">
+            Тип Базы Данных
+        </h4>
+        <input type="checkbox" class="set-input col-md-1">
+        <label class="set-label col-md-11">
+            Cache
+        </label>
+        <input type="checkbox" class="set-input col-md-1">
+        <label class="set-label col-md-11">
+            SQL
+        </label>
+        <button class="btn save">Сохранить</button>
+        <button class="btn cancel">Отменить</button>
+    </form>
+</div>
+<div class="col-md-7">
+    <h2>Администрирование</h2>
+    <h4>Пользователи</h4>
+    <table class="table users">
+        <tr>
+            <th>№</th>
+            <th>Имя</th>
+            <th>Статус</th>
+            <th>Группа</th>
+        </tr>
+        <tr><td>1</td><td>Admin</td><td>Activate</td><td>Admin</td></tr>
+        <tr><td>2</td><td>Developer</td><td>Activate</td><td>Ap. Dev</td></tr>
+        <tr><td>3</td><td>User 1</td><td>Deactivate</td><td>User</td></tr>
+        <tr><td>4</td><td>User 2</td><td>Activate</td><td>User</td></tr>
+    </table>
+    <h4>Парва</h4>
+    <table class="table users-rules">
+        <tr>
+            <th>Group Name</th>
+            <th>User Edit</th>
+            <th>AP Create</th>
+            <th>AP Read</th>
+            <th>AP Edit</th>
+        </tr>
+        <tr><td>Admin</td><td><input type="checkbox" class="rule-checkbox"></td><td><input type="checkbox" class="rule-checkbox"></td><td><input type="checkbox" class="rule-checkbox"></td><td><input type="checkbox" class="rule-checkbox"></td></tr>
+        <tr><td>AP Deceloper</td><td><input type="checkbox" class="rule-checkbox"></td><td><input type="checkbox" class="rule-checkbox"></td><td><input type="checkbox" class="rule-checkbox"></td><td><input type="checkbox" class="rule-checkbox"></td></tr>
+        <tr><td>User</td><td><input type="checkbox" class="rule-checkbox"></td><td><input type="checkbox" class="rule-checkbox"></td><td><input type="checkbox" class="rule-checkbox"></td><td><input type="checkbox" class="rule-checkbox"></td></tr>
+    </table>
+    <button class="btn save">Сохранить</button>
+    <button class="btn cancel">Отменить</button>
+</div>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%=blocks.title%></title>
+
+    <link rel="stylesheet" href="/vendor/bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/css/app.css"/>
+    <script type="javascript" src="/js/main.js"></script>
+
+    <script src="/vendor/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/vendor/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+</head>
+<body>
+<header>
+    <%-blocks.header%>
+    <%-partial('../partials/topNav')%>
+</header>
+<section class="content-wrap">
+    <div class="col-md-2 nav-left">
+        <h4>Active Rules Manager</h4>
+        <ul class="col-md-12 nav-btns-wrap">
+            <li id="constructor" class="col-md-12 btn"><a href="/constructor">Конструктор правил</a></li>
+            <li id="analize" class="col-md-12 btn"><a href="/analize">Анализ</a></li>
+            <li id="audit" class="col-md-12 btn"><a href="/audit">Аудит Исполнения</a></li>
+            <li id="settings" class="col-md-12 btn active"><a href="/settings">Настройки</a></li>
+        </ul>
+    </div>
+    <div class="col-lg-10 container">
+
+        <h1><%=blocks.title%></h1>
+
+        <%-body -%>
+    </div>
+</section>
+<footer>
+    <%-partial('../partials/botNav')%>
+    <%-blocks.footer%>
+</footer>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<% layout('layout/page') -%>
+<% block('title', 'Аудит Исполнения АП'); -%>
+<div class="col-md-6 table-wrap">
+    <h2>Аудит Исполнения</h2>
+    <table class="table auditor">
+        <tr>
+            <th>№</th>
+            <th>Название</th>
+            <th>Пинг</th>
+            <th>Статус</th>
+        </tr>
+        <tr><td>1</td><td>Rule 1</td><td>256 мс</td><td>1</td></tr>
+        <tr><td>2</td><td>Rule 2</td><td>0 мс</td><td>0</td></tr>
+        <tr><td>3</td><td>Rule 3</td><td>256 мс</td><td>1</td></tr>
+        <tr><td>4</td><td>Rule 4</td><td>67 мс</td><td>-1</td></tr>
+    </table>
+</div>
+<div class="col-md-offset-1 col-md-5 log-wrap">
+    <h2>Журнал</h2>
+    <table class="table auditor-log">
+        <tr><td>11:30</td><td>Пользователь Developer изменил Rule 1</td></tr>
+        <tr><td>12:43</td><td>Rule 2 активирован событием Even 3</td></tr>
+    </table>
+</div>
