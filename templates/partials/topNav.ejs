@@ -1,10 +1,31 @@
 <div class="nav-wrap">
     <nav class="navbar navbar-default top col-lg-12" role="navigation">
         <ul class="nav navbar-nav">
+            <% if (user) { %>
+            <li><a class="logo-wrap" href="/construct"><img src="images/logo.png"></a></li>
+            <% } else { %>
             <li><a class="logo-wrap" href="/"><img src="images/logo.png"></a></li>
+            <% } %>
         </ul>
         <ul class="nav navbar-nav navbar-right top-r">
-            <li><a class="btn-exit" href="/#">Выход</a></li>
+            <% if (user) { %>
+            <li><a href="" onclick="logout" class="btn sign out">Выйти</a></li>
+            <% } else { %>
+            <li><a href="/login" class="btn sign in">Войти</a></li>
+            <% } %>
         </ul>
     </nav>
 </div>
+
+<script>
+    function logout() {
+        $.ajax({
+            url: "/logout",
+            method: "POST",
+            complete: function() {
+                $(":submit").button("btn sign out");
+            }
+        });
+    return false
+    }
+</script>

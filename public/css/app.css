@@ -29,21 +29,28 @@ a.logo-wrap {
 .logo-wrap img {
   height: 30px;
 }
-.navbar-default .navbar-nav.top-r > li > a {
+.navbar-default .navbar-nav.top-r > li > a.btn.sign {
   width:130px;
   height: 60px;
   background-color: #cc3333;
   color:white;
   font-size:33px;
 }
-.navbar-default .navbar-nav.top-r > li > a:hover {
+.navbar-default .navbar-nav.top-r > li > a.btn.sign.in{
+    background-color: #00a800;
+}
+.navbar-default .navbar-nav.top-r > li > a.btn.sign:hover {
     text-decoration: underline;
     background-color: #5a1616;
 }
-.top-r a.btn-exit:active {
+.navbar-default .navbar-nav.top-r > li > a.btn.sign.in:hover {
+    text-decoration: underline;
+    background-color: #006300;
+}
+.top-r a.btn.sign:active {
   color: white;
 }
-a.btn-exit:visited {
+a.btn.sign:visited {
   color: white;
 }
 
